@@ -67,7 +67,7 @@ func (c *Client) Enqueue(ctx context.Context, j *Job) error {
 	return c.execEnqueue(ctx, j, c.pool)
 }
 
-// Enqueue adds a job to the queue with a specific id
+// EnqueueWithID adds a job to the queue with a specific id
 func (c *Client) EnqueueWithID(ctx context.Context, j *Job, ulid ulid.ULID) error {
 	return c.execEnqueueWithID(ctx, j, c.pool, ulid)
 }
